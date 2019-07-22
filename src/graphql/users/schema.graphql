@@ -1,0 +1,15 @@
+type User {
+  id: ID!
+  name: String!
+}
+
+type Query {
+  hello: String
+  getUsers: [User]
+  getToken: String
+  validateToken(token: String): Boolean
+}
+
+type Mutation {
+  signUp(username: String, password: String): String
+}

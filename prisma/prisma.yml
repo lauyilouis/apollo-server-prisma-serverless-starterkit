@@ -1,0 +1,14 @@
+datamodel: datamodel.prisma
+endpoint: ${env:PRISMA_SERVER_ENDPOINT}
+# endpoint: http://localhost:4466/dev
+databaseType: document
+
+secret: ${env:PRISMA_SERVICE_API_SECRET}
+
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client/
+
+hooks:
+  post-deploy:
+    - prisma generate

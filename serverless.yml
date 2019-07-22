@@ -1,0 +1,40 @@
+service: apollo-lambda
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${env:APOLLO_SERVER_DEPLOYMENT_STAGE}
+  region: ${env:APOLLO_SERVER_DEPLOYMENT_REGION}
+  environment:
+    NODE_ENV: ${env:NODE_ENV}
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-offline
+
+custom:
+  dotenv:
+    path: .serverless.env
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+    # If you use Yarn instead of NPM in your environment, uncomment the following line.
+    packager: yarn
+
+functions:
+  graphql:
+    # this is formatted as <FILENAME>.<HANDLER>
+    handler: src/index.graphqlHandler
+    events:
+    - http:
+        path: graphql
+        method: post
+        cors: true
+        integration: lambda-proxy
+
+    - http:
+        path: graphql
+        method: get
+        cors: true
+        integration: lambda-proxy

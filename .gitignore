@@ -1,0 +1,11 @@
+.keys
+.serverless
+node_modules
+.webpack
+.env
+.serverless.env
+settings.json
+*.log
+.DS_Store
+.nvmrc
+yarn.lock
