@@ -18,6 +18,7 @@ The goal of this repo is to provide a production ready starter-kit using the abo
 
 # Prerequisites
 ## For local developement
+- Yarn: https://yarnpkg.com/
 - Prisma CLI: https://www.prisma.io/docs/prisma-cli-and-configuration/using-the-prisma-cli-alx4/
 
 ## For deployment (including those for local development)
