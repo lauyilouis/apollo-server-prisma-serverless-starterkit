@@ -103,8 +103,8 @@ For security concern, the Prisma server should only be accessible by the Apollo 
 
 # Todo
 - Complete Auth flow.
-- Add table of content.
-- Make SSH connection between Apollo Server Lambda API and Prisma Server.
-- Investigate the needs of restricting outbound connections of Prisma Server to access MongoDB instance only.
+- Add table of content to readme.
+- Investigate how to secure the connection between Apollo Server Lambda and Prisma Server (i.e. use https or/and make all connections inside the same VPC).
+- Make tutorial of restricting outbound connections of Prisma Server to only access remote MongoDB instance.
 - Support different stages of deployment (e.g. `staging`, `production`). There is only `production` stage now. 
 - Add local MongoDB for Prisma docker services.
