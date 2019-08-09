@@ -19,7 +19,8 @@ The goal of this repo is to provide a production ready starter-kit using the abo
 # Prerequisites
 ## For local developement
 - Yarn: https://yarnpkg.com/
-- Prisma CLI: https://www.prisma.io/docs/prisma-cli-and-configuration/using-the-prisma-cli-alx4/
+- Prisma CLI (version 1.28.3 due to deployment issue): https://www.prisma.io/docs/prisma-cli-and-configuration/using-the-prisma-cli-alx4/
+- Docker: https://www.docker.com/
 
 ## For deployment (including those for local development)
 - AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
